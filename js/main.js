@@ -67,7 +67,7 @@ $( document ).ready(function() {
         // Validate phone inputs
         $(".phone-validate").mask("+7 (999) 999-99-99");
         // Map in footer
-        $("#map").on('click', function (){ 
-            $(this).toggleClass('map-clicked');
-        });
+        // $("#map").on('click', function (){ 
+        //     $(this).toggleClass('map-clicked');
+        // });
 });
