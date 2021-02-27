@@ -4,7 +4,7 @@ $( document ).ready(function() {
     if (screenWidth < 768) {
         $('.header-block').after('<nav class="header-navbar mt-0"><a href="#advantages">Преимущества</a><a href="#clients">Наши клиенты</a><a href="#prices">Цены</a><a href="#faq">FAQ</a><a href="#">Контакты</a></nav>');
     } else {
-        $('.contacts').before('<nav class="header-navbar mt-0"><a href="#advantages">Преимущества</a><a href="#clients">Наши клиенты</a><a href="#prices">Цены</a><a href="#faq">FAQ</a><a href="#">Контакты</a></nav>');
+        $('.contacts').before('<nav class="header-navbar mt-0"><a href="#advantages">Преимущества</a><a href="#clients">Наши клиенты</a><a href="#prices">Цены</a><a href="#faq">FAQ</a><a href="#footer">Контакты</a></nav>');
     };
     $('.slider').slick({
         slidesToShow: 3,
@@ -57,7 +57,11 @@ $( document ).ready(function() {
                 }
             ],
         });
-        
-        ymaps.ready(function(){new ymaps.Map("map",{center:[55.65321497, 51.80665612],zoom:15.4},{searchControlProvider:"yandex#search"}).geoObjects.add(new ymaps.Placemark([55.65321497, 51.80665612],{},{preset:"islands#blueCircleDotIcon"}))})
-
+        ymaps.ready(function(){new ymaps.Map("map",{center:[55.65321497, 51.80665612],zoom:15.4},{searchControlProvider:"yandex#search"}).geoObjects.add(new ymaps.Placemark([55.65321497, 51.80665612],{},{preset:"islands#blueCircleDotIcon"}))});
+        $('.header-navbar a[href^="#"]').click(function (){
+            var elementClick = $(this).attr("href");
+            var destination = $(elementClick).offset().top;
+            jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
+            return false;
+        });
 });
