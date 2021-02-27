@@ -64,4 +64,10 @@ $( document ).ready(function() {
             jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
             return false;
         });
+        // Validate phone inputs
+        $(".phone-validate").mask("+7 (999) 999-99-99");
+        // Map in footer
+        $("#map").on('click', function (){ 
+            $(this).toggleClass('map-clicked');
+        });
 });

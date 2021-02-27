@@ -210,20 +210,20 @@
     </main>
     <footer id="footer">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
                 <div class="footer-contact__item col-12 col-lg-3 col-sm-6">
                     <span class="footer-contact__tag">График работы</span><br>
                     <span class="footer-contact__link">Пн-ВС: с 12.00 до 20.00</span>
                 </div>
-                <div class="footer-contact__item col-12 col-lg-3 col-sm-6 mt-3">
+                <div class="footer-contact__item col-12 col-lg-3 col-sm-6 mt-3 mt-sm-0">
                     <span class="footer-contact__tag">Адрес</span><br>
-                    <span class="footer-contact__link">Республика Татарстан, Нижнекамск<br>улица Сююмбике, 60</span>
+                    <span class="footer-contact__link">Нижнекамск<br>улица Сююмбике, 60</span>
                 </div>
-                <div class="footer-contact__item col-12 col-lg-3 col-sm-6 mt-3">
+                <div class="footer-contact__item col-12 col-lg-3 col-sm-6 mt-3 mt-md-0">
                     <span class="footer-contact__tag">Электронная почта</span><br>
                     <a class="footer-contact__link" href="mailto:svetovaya-reklam@yandex.ru">svetovaya-reklam@yandex.ru</a>
                 </div>
-                <div class="footer-contact__item col-12 col-lg-3 col-sm-6 mt-3">
+                <div class="footer-contact__item col-12 col-lg-3 col-sm-6 mt-3 mt-md-0">
                     <span class="footer-contact__tag">Телефоны</span><br>
                     <a class="footer-contact__link" href="tel:+79274702233">+7 (927) 470-22-33</a>
                 </div>
@@ -234,13 +234,17 @@
                 <div class="col-12 col-md-2">
                     <div class="d-flex align-items-center flex-column">
                         <img src="img/logo.png" alt="logo">
-                        <div class="contacts-social mt-3">
+                        <div class="contacts-social mt-2">
                             <a href="https://vk.com/svetovaya_reklam"><img class="mr-2 mr-sm-1" src="img/vk-logo.png" alt="vk-logo"></a>
                             <a href="https://www.instagram.com/svetovaya_reklama/"><img src="img/insta-logo.png" alt="insta-logo"></a>
                         </div>
+                        <div class="contacts-social mt-2">
+                            <a href="https://wa.me/79274702233"><img class="mr-2 mr-sm-1" src="img/whatsapp-logo.png" alt="whatsapp-logo"></a>
+                            <a href="https://t.me/Svetovaya_reklama"><img src="img/tg-logo.png" alt="tg-logo"></a>
+                        </div>
                     </div>
                 </div>
-                <div id="map" class="col-12 mx-0 col-md-10 mt-3 mt-md-0" style="background-color: #fff;height: 155px;"></div>
+                <div id="map" class="col-12 px-0 col-md-10 mt-3 mt-md-0" style="background-color: #fff;"></div>
             </div>
         </div>
     </footer>
@@ -250,10 +254,10 @@
       <div class="modal-content">
         <div class="modal-body text-center">
             <span class="modal-title">Оставьте заявку и мы вам обязательно перезвоним в течении 30 минут</span>
-            <form action="tg.php">
-                    <input type="text" class="mt-2 form-control" name=user_phone" placeholder="Ваше имя">
-                    <input type="email" class="mt-2 form-control" name="user_" placeholder="Ваш email">
-                    <input type="text" class="mt-2 form-control" name=user_phone" placeholder="Ваш телефон">
+            <form action="tg.php" method="POST">
+                    <input type="text" class="mt-2 form-control" name="user_name" required placeholder="Ваше имя">
+                    <input type="email" class="mt-2 form-control" name="user_email" placeholder="Ваш email">
+                    <input type="text" class="mt-2 phone-validate form-control" required name="user_phone" placeholder="Ваш телефон">
                 <button type="submit" class="btn btn-yellow mt-3">Отправить заявку</button>
               </form>
         </div>
@@ -261,6 +265,7 @@
     </div>
   </div>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
