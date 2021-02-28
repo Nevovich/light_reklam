@@ -2,7 +2,7 @@ $( document ).ready(function() {
     // Определение ширины экрана
     let screenWidth = window.innerWidth;
     if (screenWidth < 768) {
-        $('.header-block').after('<nav class="header-navbar mt-0"><a href="#advantages">Преимущества</a><a href="#clients">Наши клиенты</a><a href="#prices">Цены</a><a href="#faq">FAQ</a><a href="#">Контакты</a></nav>');
+        $('.header-block').after('<nav class="header-navbar mt-3"><a href="#advantages">Преимущества</a><a href="#clients">Наши клиенты</a><a href="#prices">Цены</a><a href="#faq">FAQ</a><a href="#">Контакты</a></nav>');
     } else {
         $('.contacts').before('<nav class="header-navbar mt-0"><a href="#advantages">Преимущества</a><a href="#clients">Наши клиенты</a><a href="#prices">Цены</a><a href="#faq">FAQ</a><a href="#footer">Контакты</a></nav>');
     };
@@ -66,8 +66,5 @@ $( document ).ready(function() {
         });
         // Validate phone inputs
         $(".phone-validate").mask("+7 (999) 999-99-99");
-        // Map in footer
-        // $("#map").on('click', function (){ 
-        //     $(this).toggleClass('map-clicked');
-        // });
+        
 });
